@@ -1,0 +1,11 @@
+[package]
+name = "jazzy_render"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wgpu = "0.14"
+winit = "0.27"
+pollster = "0.2"
+env_logger = "0.9"
+log = "0.4"

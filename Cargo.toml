@@ -1,0 +1,7 @@
+[package]
+name = "jazzy"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+jazzy_render = { path = "cargo/jazzy_render" }
