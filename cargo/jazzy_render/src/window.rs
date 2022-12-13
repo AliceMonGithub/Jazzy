@@ -1,22 +1,12 @@
 use winit::{
-    event::*,
-    event_loop::{ControlFlow, EventLoop},
-    window::WindowBuilder,
+    event_loop::EventLoop,
+    window::{WindowBuilder, Window},
 };
 
-pub fn create() {
+pub fn create() -> (EventLoop<()>, Window) {
+    env_logger::init();
     let event_loop = EventLoop::new();
     let window = WindowBuilder::new().build(&event_loop).unwrap();
 
-    event_loop.run(move |event, _, control_flow| match event {
-        Event::WindowEvent {
-            ref event,
-            window_id,
-        } if window_id == window.id() => match event {
-            WindowEvent::CloseRequested
-            => *control_flow = ControlFlow::Exit,
-            _ => {}
-        },
-        _ => {}
-    });
+    (event_loop, window)
 }
