@@ -4,4 +4,10 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-jazzy_render = { path = "cargo/jazzy_render" }
+jazzy_render = { path = "crates/jazzy_render" }
+jazzy_app = { path = "crates/jazzy_app" }
+jazzy_ecs = { path = "crates/jazzy_ecs" }
+
+[[example]]
+name = "window_example"
+path = "examples/window_example.rs"
